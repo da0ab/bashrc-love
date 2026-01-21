@@ -1,10 +1,10 @@
 # BASHRC-LOVE
 
-(./img/logo.png)
+![Лого](./img/logo.png)
 
-(./img/ctr_r.png)
+![История](./img/ctr-r.png)
 
-(./img/zi.png)
+![Пути](./img/zi.png)
 ## Структура
 
 ```bash
