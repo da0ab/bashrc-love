@@ -1,69 +1,67 @@
 # BASHRC-LOVE
 
-# Алиасы
+## Алиасы
 
-## Навигация
+### Навигация
 `..` - на уровень выше
 `...` - на два уровня выше
 
-## Файлы
+### Файлы
 `l` - дерево (1 уровень)
 `ll` - подробный список
 `la` - подробно со скрытыми
 `lt` - полное дерево
 
-## Система
+### Система
 `t` - дата и календарь
 `pa` - все процессы
 `k` - убить процесс
 `kk` - убить все процессы
 `kkk` - принудительно убить
 
-## Оболочка
+### Оболочка
 `bsh` - перезагрузить bashrc
 `bin` - сделать исполняемым
 `c` - очистить экран
 `q` - выйти
 
-## Редакторы и файловые менеджеры
+### Редакторы и файловые менеджеры
 `vv` - vim
 `gg` - gvim
 `sv` - sudo gvim
 `ff` - lf
 `ss` - spf
 
-## Мультимедиа
+### Мультимедиа
 `mm` - mocp
 `m` - alsamixer
 `sz` - скриншот области
 
-## Python
+### Python
 `ppp` - python3
 
-## Git
+### Git
 `gs` - статус
 `gc` - клонировать
 `mk` - собрать и установить
 
-## Пакеты
+### Пакеты
 `new` - обновить систему
 `inst` - установить пакет
 `deb` - установить .deb
 `list` - редактировать sources.list
 
-## Инфо
+### Инфо
 `comp` - отчет о системе
 `about` - информация о системе
 
 
-# Плагины
+## Плагины
 ``Ctrl+r `` – замена встроенного поиска по истории
 ``zi`` – поиск по сохраненным путям
 ``fzf`` – поиск
 
--------
-[fzf](https://github.com/junegunn/fzf)
--------
+### [fzf](https://github.com/junegunn/fzf)
 
 ``
 git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
@@ -75,13 +73,9 @@ git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
 ~/.fzf/install
 ``
 
--------
-[zoxide](https://github.com/ajeetdsouza/zoxide)
--------
+### [zoxide](https://github.com/ajeetdsouza/zoxide)
 
--------
-[lsd](https://github.com/lsd-rs/lsd)
--------
+### [lsd](https://github.com/lsd-rs/lsd)
 
 **Установить шрифты с иконками**
 
