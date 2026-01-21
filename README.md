@@ -2,9 +2,7 @@
 
 ![Лого](./img/logo.png)
 
-![История](./img/ctr-r.png)
 
-![Пути](./img/zi.png)
 ## Структура
 
 ```bash
@@ -89,7 +87,9 @@
 - ``zi`` – поиск по сохраненным путям
 - ``fzf`` – поиск
 
+![История](./img/ctr-r.png)
 
+![Пути](./img/zi.png)
 -------
 
 ### [fzf](https://github.com/junegunn/fzf)
