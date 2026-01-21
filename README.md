@@ -2,7 +2,7 @@
 
 ## Структура
 
-``
+```bash
 .bashrc
 [].bashrc.d/
 ├──  01-exports.sh
@@ -14,7 +14,7 @@
 ├──  07-superfile.sh
 ├──  08-lf.sh
 └──  09-functions.sh
-``
+```
 
 
 ## Алиасы
@@ -55,7 +55,7 @@
 - `sz` - скриншот области
 
 ### Python
-`ppp` - python3
+- `ppp` - python3
 
 ### Git
 - `gs` - статус
@@ -78,23 +78,18 @@
 - ``zi`` – поиск по сохраненным путям
 - ``fzf`` – поиск
 
+
+-------
+
 ### [fzf](https://github.com/junegunn/fzf)
-
-``
-git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
-``
-
-Инсталляция
-
-``
-~/.fzf/install
-``
+`` git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf ``
+Инсталляция `` ~/.fzf/install ``
 
 ### [zoxide](https://github.com/ajeetdsouza/zoxide)
 
 ### [lsd](https://github.com/lsd-rs/lsd)
 
-**Установить шрифты с иконками**
+### NerdFonts
 
 ``
 mkdir -p ~/.local/share/fonts/NerdFonts
