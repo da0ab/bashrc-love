@@ -1,7 +1,17 @@
 # bashrc-love
-bashrc config
 
 
-lsd
+#-------
 fzf
+#-------
+git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
+
+Инсталляция
+~/.fzf/install
+
+
+
+
+
+
 
