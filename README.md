@@ -16,6 +16,12 @@
 └──  09-functions.sh
 ```
 
+## Скрипт установки
+
+``install-bashrc-love.sh``
+
+``chmod +x install-bashrc-love.sh``
+
 
 ## Алиасы
 
