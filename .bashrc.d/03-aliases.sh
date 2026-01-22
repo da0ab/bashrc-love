@@ -6,6 +6,11 @@ alias ll='lsd -l'
 alias la='lsd -la'
 alias lt='lsd -a --tree'
 
+alias mkdir='mkdir -p -v'
+alias cp='cp --preserve=all'
+alias cpv='cp --preserve=all -v'
+alias cpr='cp --preserve=all -R'
+
 alias t='date & cal'
 
 alias pa='ps ax'
