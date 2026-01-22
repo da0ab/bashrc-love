@@ -1,7 +1,4 @@
 # Generated from bashrc.d files
-#--------------------
-# $(date)
-#--------------------
 
 user_name="termux"
 editor="vim"
@@ -208,7 +205,7 @@ bk() {
 }
 
 
-#### Display ########################
+# Display
 
 clear
 echo -e "\e[0;37m"

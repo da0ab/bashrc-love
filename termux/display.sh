@@ -1,4 +1,4 @@
-#### Display ########################
+# Display
 
 clear
 echo -e "\e[0;37m"
