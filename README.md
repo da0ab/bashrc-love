@@ -89,7 +89,6 @@
 
 ![История](./img/ctr-r.png)
 
--------
 
 - [zoxide](https://github.com/ajeetdsouza/zoxide)
 - [lsd](https://github.com/lsd-rs/lsd)
