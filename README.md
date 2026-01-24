@@ -5,7 +5,7 @@
 
 ## Структура
 
-```bash
+```
 .bashrc
 [].bashrc.d/
 ├──  01-exports.sh
