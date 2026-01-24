@@ -100,20 +100,7 @@
 
 ![Пути](./img/zi.png)
 
-## NerdFonts
+## AnonymicePro Nerd Font Regular
 
-Скачать скрипт установки
-``
-git clone --depth 1 https://github.com/ryanoasis/nerd-fonts.git
-cd nerd-fonts
-``
-
-Установить ВСЕ шрифты (~4ГБ)
-``
-./install.sh
-``
-
-Или установить конкретные шрифты
-``
-./install.sh Hack FiraCode CascadiaCode
-``
+``curl -fLo ~/.local/share/fonts/"AnonymicePro Nerd Font Regular.ttf" \
+  https://raw.githubusercontent.com/ryanoasis/nerd-fonts/master/patched-fonts/AnonymousPro/Regular/AnonymiceProNerdFont-Regular.ttf``
