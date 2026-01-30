@@ -1,41 +1,33 @@
-# Цвета
-USER_COLOR="214"    # Оранжевый
-HOST_COLOR="32"     # Зелёный
-PATH_COLOR="39"     # Голубой для пути
+prompt_my() {
+   local CYAN="\[\033[0;36m\]"
+   local MAGENTA="\[\033[1;35m\]"
+   local TIME_COLOR='\[\033[38;5;22m\]'
+   local RESET="\[\033[0m\]"
+   local RED="\[\033[1;31m\]"
+   local YELLOW="\[\033[0;33m\]"
 
-# Символы
-PROMPT_ICON="ᛗ"    # Символ при старте
-PROMPT_SYMBOL="$"   # Символ $
+   function _get_small_time() {
+     local current_time=$(date +%H:%M)
+     echo "$current_time" | sed -e 'y/0123456789:/₀₁₂₃₄₅₆₇₈₉./'
+   }
+   local small_time=$(_get_small_time)
 
-_set_prompt() {
-    local prompt_type
+   PS1=""
+   PS1+="${MAGENTA}"
+   PS1+="╭ ${TIME_COLOR}${small_time}${RESET} ${CYAN}\w\n"
+   PS1+="${MAGENTA}"
+   PS1+="╰⊸ ${RESET}"
 
-    if [[ -n "$SSH_CONNECTION" ]]; then
-        prompt_type="ssh"
-    elif [[ $EUID -eq 0 ]]; then
-        prompt_type="root"
-    else
-        prompt_type="local"
-    fi
-
-    case $prompt_type in
-        "local")
-            # Локально:  ~/
-PS1='\[\e[0;34m\]╔═ \[\e[0;36m\]\w\n\[\e[0;34m\]╚═\[\e[1;35m\] ◎ \[\e[0m\]'
-            ;;
-
-        "root")
-            # Root: @root ~/ $
-            PS1="\[\e[38;5;196m\]@root \[\e[38;5;${PATH_COLOR}m\]\w\[\e[0m\] ${PROMPT_SYMBOL} "
-            ;;
-
-        "ssh")
-            # SSH: @remote-host ~/ $
-            PS1="\[\e[38;5;${USER_COLOR}m\]${PROMPT_ICON}\[\e[38;5;${HOST_COLOR}m\]@\h \[\e[38;5;${PATH_COLOR}m\]\w\[\e[0m\] ${PROMPT_SYMBOL} "
-            ;;
-    esac
+   if [ "$EUID" -eq 0 ]; then
+       local ROOT_INFO="${RED}[root]${RESET}"
+       PS1+="${ROOT_INFO} "
+   elif [ -n "$SSH_CLIENT" ]; then
+       local SSH_INFO="${YELLOW}ssh: \u@\h${RESET}"
+       PS1+="${SSH_INFO} "
+   fi
 }
-PROMPT_COMMAND="history_filter; _set_prompt"
 
-# Устанавливаем цвет курсора (оранжевый)
-echo -ne "\033]12;#ba9a4c\007"
+PROMPT_COMMAND="prompt_my; history_filter"
+# Цвет курсора
+#echo -ne "\033]12;#ba9a4c\007"
+echo -ne "\033]12;#ba9a4c\007\e[4 q"

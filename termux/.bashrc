@@ -1,4 +1,3 @@
-# Generated from bashrc.d files
 
 user_name="termux"
 editor="vim"
@@ -33,8 +32,10 @@ alias ...='cd ../..'
 
 alias l='lsd -a --tree --depth 1'
 alias ll='lsd -l'
+alias lll='lsd'
 alias la='lsd -la'
 alias lt='lsd -a --tree'
+alias ls='ls --color=auto'
 
 alias mkdir='mkdir -p -v'
 alias cp='cp --preserve=all'
@@ -87,38 +88,28 @@ shopt -s globstar
 shopt -s autocd
 shopt -s checkwinsize
 
+# FZF конфигурация
+FZF_BASE="--height=90% --layout=reverse --border=rounded --margin=1 --padding=1 --pointer='▋'"
+
+export FZF_DEFAULT_OPTS="$FZF_BASE --prompt=' поищемка ' \
+    --preview='ls -la --color=always {} 2>/dev/null | head -200' \
+    --preview-window='down:10%:border-top'"
+
 # Умная навигация по каталогам zoxide
 eval "$(zoxide init bash)"
 
 zi() {
-    local d
-    d="$(zoxide query -l -- "$@" | fzf \
-        --height=50% \
-        --layout=reverse \
-        --border=rounded \
-        --margin=1 \
-        --padding=1 \
-        --prompt='прыгнуть в  ➜ ' \
-        --pointer='▋' \
-        --preview='ls -a --color=always {} | head -n 200' \
-        --preview-window=down:50%:border-top \
-    )" || return
-    cd -- "$d"
+    cd -- "$(zoxide query -l -- "$@" | fzf --height=80% \
+        --prompt='прыгнуть в ➜ ' \
+        --preview='ls -la --color=always {} 2>/dev/null | head -200' \
+        --preview-window='down:50%:border-top')" 2>/dev/null || return
 }
 
 # Интерактивный поиск fzf
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
 
-export FZF_CTRL_R_OPTS=" \
- --layout=reverse \
- --border=rounded \
- --info=inline \
- --header 'Поиск по истории команд' \
- --prompt 'Искать: ' \
- --pointer='▋' \
- --marker='✓' \
- --tac"
-
+export FZF_CTRL_R_OPTS="--layout=reverse --border=rounded --info=inline \
+    --header 'История команд' --prompt 'Искать: ' --pointer='▋' --marker='✓' --tac"
 # Цвета
 USER_COLOR="214"    # Оранжевый
 HOST_COLOR="32"     # Зелёный

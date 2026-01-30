@@ -3,8 +3,10 @@ alias ...='cd ../..'
 
 alias l='lsd -a --tree --depth 1'
 alias ll='lsd -l'
+alias lll='lsd'
 alias la='lsd -la'
 alias lt='lsd -a --tree'
+alias ls='ls --color=auto'
 
 alias mkdir='mkdir -p -v'
 alias cp='cp --preserve=all'
