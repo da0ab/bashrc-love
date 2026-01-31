@@ -35,6 +35,7 @@ if [[ -d "$BASHRC_DIR" ]]; then
         "06-prompt.sh"
         "08-lf.sh"
         "09-functions.sh"
+        "root.sh"
     )
 
     for file in "${FILES[@]}"; do

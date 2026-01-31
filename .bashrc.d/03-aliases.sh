@@ -26,7 +26,7 @@ alias c='clear'
 alias q='exit'
 
 alias vv='vim'
-alias gg='gvim'
+alias gg='gvim 2>/dev/null'
 alias sv='sudo gvim'
 alias ff='lf'
 alias ss='spf'

@@ -12,22 +12,15 @@ prompt_my() {
    }
    local small_time=$(_get_small_time)
 
-   PS1=""
-   PS1+="${MAGENTA}"
-   PS1+="╭ ${TIME_COLOR}${small_time}${RESET} ${CYAN}\w\n"
-   PS1+="${MAGENTA}"
-   PS1+="╰⊸ ${RESET}"
+    PS1=""
+    PS1+="${MAGENTA}"
+    PS1+="╭ ${TIME_COLOR}${small_time}${RESET} ${CYAN}\w\n"
+    PS1+="${MAGENTA}"
+    PS1+="╰⊸ ${RESET}"
 
-   if [ "$EUID" -eq 0 ]; then
-       local ROOT_INFO="${RED}[root]${RESET}"
-       PS1+="${ROOT_INFO} "
-   elif [ -n "$SSH_CLIENT" ]; then
-       local SSH_INFO="${YELLOW}ssh: \u@\h${RESET}"
-       PS1+="${SSH_INFO} "
-   fi
 }
 
 PROMPT_COMMAND="prompt_my; history_filter"
 # Цвет курсора
-#echo -ne "\033]12;#ba9a4c\007"
-echo -ne "\033]12;#ba9a4c\007\e[4 q"
+echo -ne "\033]12;#ba9a4c\007"
+#echo -ne "\033]12;#ba9a4c\007\e[4 q"
