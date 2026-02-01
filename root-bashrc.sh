@@ -32,7 +32,6 @@ if [[ -d "$BASHRC_DIR" ]]; then
         "03-aliases.sh"
         "04-autocomplit.sh"
         "05-fzf-lsd-zoxide.sh"
-        "06-prompt.sh"
         "08-lf.sh"
         "09-functions.sh"
         "root.sh"
