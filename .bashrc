@@ -5,6 +5,7 @@
 [ -f ~/.bashrc.d/05-fzf-lsd-zoxide.sh ] && . ~/.bashrc.d/05-fzf-lsd-zoxide.sh
 [ -f ~/.bashrc.d/06-prompt.sh ] && . ~/.bashrc.d/06-prompt.sh
 [ -f ~/.bashrc.d/07-nnn.sh ] && . ~/.bashrc.d/07-nnn.sh
-[ -f ~/.bashrc.d/09-functions.sh ] && . ~/.bashrc.d/09-functions.sh
-
+[ -f ~/.bashrc.d/08-functions.sh ] && . ~/.bashrc.d/08-functions.sh
+[ -f ~/.bashrc.d/09-xclip.sh ] && . ~/.bashrc.d/xclip.sh
+[ -f ~/.bashrc.d/test.sh ] && . ~/.bashrc.d/test.sh
 
