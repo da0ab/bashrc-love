@@ -22,6 +22,7 @@ alias kkk='kill -s KILL'
 
 alias bsh='source ~/.bashrc'
 alias bin='chmod +x -R '
+alias okno='xprop | grep WM_CLASS'
 alias c='clear'
 alias q='exit'
 alias host='sudo nvim /etc/hosts'
